@@ -12,6 +12,7 @@ Topics:
 - loops: while, do... while, for, nested loops
 - variables revisited, for loop: local vs global scope
 - arrays & objects: value assignment vs reference assignment, get and set values
+- conditions revisited: null values
 - special for loops: of vs in
 - break revisited vs continue
 - multi-dimensional arrays
