@@ -1,4 +1,4 @@
-# 👋 Welcome to the Javascript Basics / Refresher Course 👋
+# 👋 Javascript Basics / Refresher Course 👋
 
 Topics:
 
