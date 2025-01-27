@@ -485,6 +485,8 @@ bool1: ${bool1}
 bool2: ${bool2}`);
 ```
 
+**NOTE TO PETER: add AND &&, OR ||, XOR ^ to notes**
+
 ## switch, case, break
 
 ```js
@@ -535,6 +537,12 @@ let scope = 5;
   let scope = 3;
 }
 console.log(scope);
+```
+
+```js
+for (let step = 0; step < 5; step++) {
+  console.log("Walking east one step");
+}
 ```
 
 ## arrays & objects
