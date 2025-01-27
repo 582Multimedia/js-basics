@@ -145,20 +145,6 @@ console.log(x);
 
 This will ensure that the variable is not accidentally remade with another value somewhere else and only change when we want them to.
 
-### const (for constants)
-
-To declare a constant, use the `const` declaration
-
-```js
-const greeting = "Hi";
-greeting = "Hi there";
-const pi = 3.14;
-pi = 1;
-console.log(greeting, pi);
-```
-
-This will give us this error: `Uncaught TypeError: Assignment to constant variable.` as greeting is already set and should not change.
-
 ### Assigning values using variables
 
 ```js
@@ -174,6 +160,20 @@ console.log(fname + lname);
 let name = fname + lname;
 console.log(name);
 ```
+
+### const (for constants)
+
+To declare a constant, use the `const` declaration
+
+```js
+const greeting = "Hi";
+greeting = "Hi there";
+const pi = 3.14;
+pi = 1;
+console.log(greeting, pi);
+```
+
+This will give us this error: `Uncaught TypeError: Assignment to constant variable.` as greeting is already set and should not change.
 
 ### Logging mixed data in console
 
@@ -244,14 +244,14 @@ Also works for floating points!
 let's try adding the Number `1` and a string `654.321testing`
 
 ```js
-let parseString = `987.654testing321`;
-console.log(1 + parseString);
+let mixedString = `987.654testing321`;
+console.log(1 + mixedString);
 ```
 
 Let's try to coherse the string to Number like before...
 
 ```js
-console.log(1 + +parseString);
+console.log(1 + +mixedString);
 ```
 
 doesn't really work, it gives us `NaN`.
@@ -263,13 +263,13 @@ NaN stands for Not a Number
 #### Parsing (string to integer or floating point)
 
 ```js
-console.log(1 + +parseInt(parseString));
+console.log(1 + +parseInt(mixedString));
 ```
 
 This will give us `988`, 1 + 987 as a whole number.
 
 ```js
-console.log(1 + parseFloat(parseString));
+console.log(1 + parseFloat(mixedString));
 ```
 
 This will give us `988.654`, 1 + 987.654 as a floating point number.
