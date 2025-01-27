@@ -545,6 +545,12 @@ for (let step = 0; step < 5; step++) {
 }
 ```
 
+````js
+for (let countdown = 10; countdown > 0; countdown--) {
+  console.log(countdown);
+}
+```
+
 ## arrays & objects
 
 ### arrays
@@ -556,6 +562,15 @@ const random = ["tree", 795, [0, 1, 2]];
 console.log(colors);
 console.log(sequence);
 console.log(random);
+````
+
+### for loop using arrays or words
+
+```js
+let word = "tacocat";
+for (let i = 0; i < word.length; i++) {
+  console.log(word[i]);
+}
 ```
 
 ### objects
