@@ -24,7 +24,7 @@ Topics:
 
 ## Console, Code Flow, Loading Order & Defer
 
-# Sinlge-value output
+### Sinlge-value output
 
 ```js
 console.log("output one line of text to console");
