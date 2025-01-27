@@ -45,28 +45,52 @@ console.log(c, b, a);
 
 ## Data types
 
-### Intergers
+### Intergers (whole numbers)
 
 ```js
 console.log(1);
 ```
 
-### Floating Point
+### Floating Point (decimal)
 
 ```js
-console.log(1);
+console.log(0.1);
 ```
 
-### Text / String
+### String (Text)
+
+Strings can only be written on a single line, by wrapping the text with either single quotes `'` or double quotes `"`.
 
 ```js
 console.log("text");
 console.log("1");
 console.log(" ");
-console.log("First line\nSecond line");
+console.log("", "empty string");
+```
+
+If you want to write on more than one line, you can use the new line symbol `\n`.
+
+#### Template literals
+
+You can use template literals to write more than one line, instead of using regular single or double quotes, you can use backticks `` ` `` (the backticks key is usually under the `esc` key and next to the `1` key).
+
+```js
+console.log(`
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam luctus, urna non malesuada interdum, justo nibh ornare diam, sed maximus urna magna id augue. Sed condimentum in tellus ac tincidunt. Vestibulum molestie neque odio, eget iaculis ex iaculis quis. Nunc congue eleifend aliquam. In hac habitasse platea dictumst. Sed pulvinar aliquam eros sit amet varius. Maecenas pharetra nisi id luctus tincidunt. Fusce et efficitur lectus. Quisque cursus maximus tristique. Pellentesque eget nibh consequat, vulputate augue a, dictum massa. Donec suscipit mi quis purus sollicitudin, nec mattis enim egestas. Curabitur sed libero non risus sollicitudin laoreet nec malesuada nisl. Phasellus laoreet luctus est euismod tincidunt.
+
+Aenean dignissim dolor eget tortor bibendum, in lacinia arcu elementum. Vivamus mollis ex id odio suscipit, vitae dignissim ante maximus. Phasellus vel congue diam. Donec eget imperdiet sem. Nulla egestas, erat non viverra ultrices, tortor sem tristique mauris, et viverra enim augue at enim. Duis vitae leo ac ex imperdiet tempus. Sed sed sapien vel felis maximus vulputate. Maecenas sed commodo dui. Mauris gravida a ex dignissim lobortis. Pellentesque commodo tincidunt leo, ut tristique turpis egestas at. Quisque eget magna eget metus finibus finibus vel sed eros. Mauris ullamcorper quam nibh, volutpat scelerisque arcu mattis non.
+
+Fusce metus dui, dapibus ac elit ut, laoreet posuere est. Pellentesque consectetur metus sed risus facilisis dapibus. Maecenas quis porta nulla. Nulla consequat purus eget nunc finibus fringilla. Aenean non ultricies nunc, quis iaculis magna. Ut posuere interdum massa et interdum. Quisque luctus risus quam, quis aliquet libero accumsan at. Morbi vehicula dapibus metus porttitor tincidunt. Nunc et augue lacinia, dignissim neque sed, scelerisque est. Donec in vehicula leo, eu vulputate purus. Curabitur tristique, felis at semper egestas, libero eros malesuada felis, at euismod lectus odio vitae mi. In hac habitasse platea dictumst. Vestibulum feugiat molestie cursus.
+
+Nam pellentesque varius accumsan. Vivamus lacinia ipsum vel velit congue commodo. Donec id gravida lacus, ac egestas ex. Donec odio lacus, mollis quis sollicitudin vitae, auctor vitae ante. Nunc ac odio ultrices, ornare felis ac, tempor nulla. Quisque vitae mauris in nisl malesuada vulputate. Aliquam quis cursus dolor, at dignissim dolor. Curabitur rhoncus at nulla quis hendrerit. In posuere elementum erat, ut fringilla velit ultricies vitae. Fusce sollicitudin enim quis placerat dignissim. Nam mattis tellus non nisi interdum, vitae auctor neque vestibulum. Aenean eget volutpat nulla. Duis ultrices, massa sed varius fermentum, nunc libero sodales eros, sed feugiat nunc purus nec massa. Curabitur auctor arcu nisl, ac fermentum neque faucibus quis.
+
+Integer lobortis eleifend ipsum, ac vehicula nisl posuere quis. Vivamus laoreet lacus in faucibus venenatis. Vivamus non sagittis orci. Donec a leo risus. Sed nunc dui, gravida sit amet odio ac, lacinia condimentum arcu. Phasellus sit amet mauris turpis. Nam et augue diam. Aenean venenatis lectus quis lacus interdum sodales.
+`);
 ```
 
 ### Boolean (true / false)
+
+Truthy values are called booleans and are written in code **without quotes** (otherwise, it is considered a text and not actually truthy values).
 
 ```js
 console.log(true);
@@ -149,6 +173,25 @@ let lname = "Last";
 console.log(fname + lname);
 let name = fname + lname;
 console.log(name);
+```
+
+### Logging mixed data in console
+
+We saw that we can log two variables in the console, but we can also log mixed data, like Numbers and Strings and even variables together.
+
+```js
+console.log("Hi my name is:" + fname + " " + lname);
+```
+
+### Template literals with variables
+
+But there is a better way to log variables within a line, using `${expression}` inside a template literal. The expression will be evaluated and replaced in this process.
+
+**_Make sure to use proper template literal quotations!_**
+
+```js
+console.log("Hi my name is:" + fname + " " + lname);
+console.log(`Hi my name is: ${fname} ${lname}!`);
 ```
 
 ## Floating point problem, parsing
@@ -291,7 +334,55 @@ console.log(--change);
 console.log(change);
 ```
 
-## if & else, Negation, Conditions, Logic Operators, == vs ===
+## Boolean revisited & negation, if... else, Conditions, Logic Operators, == vs ===
+
+### Boolean revisited & negation
+
+Booleans like we said were truthy values, they can either be `true` or `false`.
+
+#### Negation
+
+True is the opposite of false, we can use the `!` negation operator to get the opposite of something.
+
+```js
+console.log(!true);
+console.log(!false);
+```
+
+#### Double Negation
+
+If something is the opposite of the opposite...
+
+```js
+console.log(!!true);
+console.log(!!false);
+```
+
+### Truth cohersion
+
+However, there are also alternative values that also mean true or false...
+
+#### Numbers
+
+Like in the case of a number, 0 would be empty and any other number it is not (even for negative numbers).
+
+```js
+console.log(!!0);
+console.log(!!1);
+console.log(!!1000);
+console.log(!!-1);
+```
+
+#### Strings
+
+```js
+console.log(!!"");
+console.log(!!"Hi!");
+console.log(!!"0");
+console.log(!!"1");
+```
+
+## if... else
 
 ```js
 let condition = true;
@@ -321,80 +412,246 @@ if (condition) {
 }
 ```
 
-## switch, case, break
+## Equality == and ===
+
+We can check equality using the `==` operator
 
 ```js
-console.log("replace");
+console.log(1 == 1);
+console.log("hello" == "hello");
+console.log("1" == 1);
+console.log(0 == false);
+```
+
+Sometimes, it's also important to check if they have the **same type of data**, particularly for `Numbers`, we can use the strict equality `===` operator.
+
+```js
+console.log(1 === 1);
+console.log("hello" === "hello");
+console.log("1" === 1);
+console.log(0 === false);
+```
+
+We can check equality using variables
+
+```js
+let bool1 = true;
+let bool2 = false;
+console.log(bool1 == bool2);
+```
+
+if we use it inside an if... else statement:
+
+```js
+if (bool1 == bool2) {
+  console.log("true!");
+} else {
+  console.log("false.");
+}
 ```
 
 ## two common mistakes: - using = (assignment operator) rather than == or === or wrong semicolon at the if line
 
+This will fail:
+
 ```js
-console.log("replace");
+if (bool1 == bool2) console.log("true!");
+else console.log("false.");
+```
+
+This also...
+
+```js
+if ((bool1 = bool2)) {
+  console.log("true!");
+} else {
+  console.log("false.");
+}
+console.log(`Values:
+bool1: ${bool1}
+bool2: ${bool2}`);
+```
+
+If we invert the value of bool2 before we run it again...
+
+```js
+if ((bool1 = !bool2)) {
+  console.log("true!");
+} else {
+  console.log("false.");
+}
+console.log(`Values:
+bool1: ${bool1}
+bool2: ${bool2}`);
+```
+
+## switch, case, break
+
+```js
+const expr = "Papayas";
+switch (expr) {
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
+    break;
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
+    // Expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+}
 ```
 
 ## loops: while, do... while, for, nested loops
 
 ```js
-console.log("replace");
-```
+let n = 0;
 
-## variables revisited, for loop: local vs global scope
+while (n < 3) {
+  n++;
+}
+
+console.log(n);
+```
 
 ```js
-console.log("replace");
+let result = "";
+let i = 0;
+
+do {
+  i = i + 1;
+  result = result + i;
+} while (i < 5);
+
+console.log(result);
 ```
 
-## arrays & objects: value assignment vs reference assignment, get and set values
+## variables revisited, for loop: global vs local / block scope
 
 ```js
-console.log("replace");
+let scope = 5;
+{
+  let scope = 3;
+}
+console.log(scope);
 ```
+
+## arrays & objects
+
+### arrays
+
+```js
+const colors = ["red", "yellow", "blue"];
+const sequence = [1, 1, 2, 3, 5, 8, 13];
+const random = ["tree", 795, [0, 1, 2]];
+console.log(colors);
+console.log(sequence);
+console.log(random);
+```
+
+### objects
+
+```js
+const dog = {
+  name: "Rocky",
+};
+const student = {
+  firstName: "Jack",
+  rollNo: 32,
+};
+const car = { type: "Fiat", model: "500", color: "white" };
+
+console.log(dog);
+console.log(student);
+console.log(car);
+```
+
+### value assignment vs reference assignment, get and set values
+
+<!-- ```js
+console.log("replace");
+``` -->
 
 ## conditions revisited: null values
 
-```js
+<!-- ```js
 console.log("replace");
+``` -->
+
+## special for loops: for...of vs for...in
+
+```js
+const array1 = ["a", "b", "c"];
+
+for (const element of array1) {
+  console.log(element);
+}
 ```
 
-## special for loops: of vs in
-
 ```js
-console.log("replace");
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
 ```
 
 ## break revisited vs continue
 
-```js
+<!-- ```js
 console.log("replace");
-```
+``` -->
 
 ## multi-dimensional arrays
 
 ```js
-console.log("replace");
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+console.log(matrix);
 ```
 
 ## string manipulation: toUpperCase, toLowerCase, substr, substring
 
-```js
+<!-- ```js
 console.log("replace");
-```
+``` -->
 
 ## functions: parameters & arguments, arrow functions, bookmarklet
 
 ```js
-console.log("replace");
+function functionName(parameter1, parameter2, parameter3) {
+  // code to be executed
+  console.log(`
+  parameter1: ${parameter1}
+  parameter2: ${parameter2}
+  parameter3: ${parameter3}
+  `);
+}
 ```
+
+```js
+functionName(1, 2, 3);
+functionName("hi", "my", "name");
+```
+
+### Arrow functions
+
+<!-- ```js
+console.log("replace");
+``` -->
 
 ## exercises: Palindrome, character replacement, return array of values from list of objects
 
-```js
+<!-- ```js
 console.log("replace");
-```
+``` -->
 
 ## if we have time: event handlers, async / await, modules
 
-```js
+<!-- ```js
 console.log("replace");
-```
+``` -->
