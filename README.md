@@ -487,6 +487,8 @@ bool2: ${bool2}`);
 
 ## Logical operators
 
+### Operators
+
 | Operator  | Usage            | Description                                                       |
 | --------- | ---------------- | ----------------------------------------------------------------- |
 | AND (&&)  | expr1 && expr2   | If both are true, return true; otherwise, return false.           |
@@ -494,9 +496,18 @@ bool2: ${bool2}`);
 | XOR (^)   | expr1 ^ expr2    | Return true if ONLY one of the two if true.                       |
 | NOT (!)   | !expr            | If expression is true, return false and vice versa.               |
 
-Examples:
+### Logic table
 
-### AND
+| expr1 | expr2 | AND                | OR                 | XOR                |
+| ----- | ----- | ------------------ | ------------------ | ------------------ |
+| true  | true  | :white_check_mark: | :x:                | :x:                |
+| true  | false | :x:                | :white_check_mark: | :white_check_mark: |
+| false | true  | :x:                | :white_check_mark: | :white_check_mark: |
+| false | false | :x:                | :x:                | :x:                |
+
+### Examples
+
+#### AND
 
 ```js
 let tryAnd;
@@ -508,7 +519,7 @@ if (tryAnd > 10 && tryAnd < 20) {
 }
 ```
 
-### OR
+#### OR
 
 ```js
 let tryOr;
@@ -520,7 +531,7 @@ if (tryOr < 10 || tryOr > 20) {
 }
 ```
 
-### XOR
+#### XOR
 
 ```js
 let tryXor;
@@ -539,7 +550,7 @@ if ((tryXor < 10) ^ (tryXor % 3 == 0)) {
 }
 ```
 
-### XOR and NOT
+#### XOR and NOT
 
 ```js
 let tryXorNot;
