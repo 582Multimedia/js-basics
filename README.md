@@ -664,7 +664,7 @@ for (let i = 0; i < word.length; i++) {
 }
 ```
 
-### Assignment - Basic Palindrome
+## Assignment - Basic Palindrome
 
 For this exercise, use all the concepts above and divise a way to check if a word is a Palindrome or not:
 
@@ -675,4 +675,4 @@ let isPalindrome;
 console.log(isPalindrome);
 ```
 
-`isPalindrome` should give you an answer back if the `wordToCheck` is a Palindrome or not.
+`isPalindrome` should be assigned a `true` or `false` value depending on if `wordToCheck` is a Palindrome or not.
