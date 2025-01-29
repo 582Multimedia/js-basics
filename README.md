@@ -687,7 +687,7 @@ for (let i = 0; i < word.length; i++) {
 }
 ```
 
-## :trollface: Assignment - Basic Palindrome
+## Assignment - Basic Palindrome :trollface:
 
 For this exercise, use all the concepts above and divise a way to check if a word is a Palindrome or not:
 
