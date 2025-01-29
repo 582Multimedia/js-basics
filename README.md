@@ -578,15 +578,25 @@ switch (expr) {
 
 ## loops: while, do... while, for, nested loops
 
+### while loop
+
+When using a `while` loop, the condition is verified **before** each iteration of the code block enclosed within curly brackets `{}`.
+
 ```js
 let n = 0;
 
 while (n < 3) {
   n++;
 }
-
 console.log(n);
 ```
+
+### do.. while loop
+
+When using a `do... while` loop, the condition is verified **after** each iteration of the code block enclosed within curly brackets `{}`.
+
+> [!NOTE]
+> A `do... while` loop will run **at least once** compared to a `while` loop since it will run **after** each iteration.
 
 ```js
 let result = "";
