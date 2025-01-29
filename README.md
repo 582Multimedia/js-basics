@@ -687,7 +687,7 @@ for (let i = 0; i < word.length; i++) {
 }
 ```
 
-## Assignment - Basic Palindrome :trollface:
+## Assignment - Basic Palindrome
 
 For this exercise, use all the concepts above and divise a way to check if a word is a Palindrome or not.
 
@@ -698,7 +698,7 @@ Sample code:
 ```js
 let wordToCheck = "tacocat";
 let isPalindrome;
-// ... write some code
+// ... write some code :trollface:
 console.log(isPalindrome);
 ```
 
