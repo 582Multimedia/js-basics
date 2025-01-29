@@ -500,7 +500,7 @@ bool2: ${bool2}`);
 
 | expr1                   | expr2                   | AND                | OR                 | XOR                |
 | ----------------------- | ----------------------- | ------------------ | ------------------ | ------------------ |
-| :white_check_mark: true | :white_check_mark: true | :white_check_mark: | :x:                | :x:                |
+| :white_check_mark: true | :white_check_mark: true | :white_check_mark: | :white_check_mark: | :x:                |
 | :white_check_mark: true | :x: false               | :x:                | :white_check_mark: | :white_check_mark: |
 | :x: false               | :white_check_mark: true | :x:                | :white_check_mark: | :white_check_mark: |
 | :x: false               | :x: false               | :x:                | :x:                | :x:                |
