@@ -612,6 +612,8 @@ console.log(result);
 
 ## variables revisited, for loop: global vs local / block scope
 
+Think levels of government: federal, provincal, municipal. When you go from the global scope into a local scope, the value can be redefined for that scope and when we exit and go back to the global scope, the value returns back to the global value.
+
 ```js
 let scope = 5;
 {
