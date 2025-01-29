@@ -485,7 +485,78 @@ bool1: ${bool1}
 bool2: ${bool2}`);
 ```
 
-**NOTE TO PETER: add AND &&, OR ||, XOR ^ to notes**
+## Logical operators
+
+| Operator  | Usage            | Description                                                       |
+| --------- | ---------------- | ----------------------------------------------------------------- |
+| AND (&&)  | expr1 && expr2   | If both are true, return true; otherwise, return false.           |
+| OR (\|\|) | expr1 \|\| expr2 | If either is true, return true; if both are false, returns false. |
+| XOR (^)   | expr1 ^ expr2    | Return true if ONLY one of the two if true.                       |
+| NOT (!)   | !expr            | If expression is true, return false and vice versa.               |
+
+Examples:
+
+### AND
+
+```js
+let tryAnd;
+tryAnd = 12;
+if (tryAnd > 10 && tryAnd < 20) {
+  console.log(`${tryAnd} is between 11 and 19.`);
+} else {
+  console.log(`${tryAnd} is NOT between 11 and 19.`);
+}
+```
+
+### OR
+
+```js
+let tryOr;
+tryOr = 9;
+if (tryOr < 10 || tryOr > 20) {
+  console.log(`${tryOr} is smaller than 10 or bigger than 20.`);
+} else {
+  console.log(`${tryOr} is between 10 and 20.`);
+}
+```
+
+### XOR
+
+```js
+let tryXor;
+tryXor = 9;
+if ((tryXor < 10) ^ (tryXor % 3 == 0)) {
+  console.log(
+    `${tryXor} is either smaller than 10 or divisible by 3, but not both.`
+  );
+} else {
+  console.log(
+    `${tryXor} is either:
+    - smaller than 10 and divisible by 3
+    or
+    - not smaller than 10 and not divisible by 3.`
+  );
+}
+```
+
+### XOR and NOT
+
+```js
+let tryXorNot;
+tryXorNot = 9;
+if ((tryXorNot < 10) ^ !(tryXorNot % 3)) {
+  console.log(
+    `${tryXorNot} is either smaller than 10 or divisible by 3, but not both.`
+  );
+} else {
+  console.log(
+    `${tryXorNot} is either:
+    - smaller than 10 and divisible by 3
+    or
+    - not smaller than 10 and not divisible by 3.`
+  );
+}
+```
 
 ## switch, case, break
 
@@ -545,7 +616,7 @@ for (let step = 0; step < 5; step++) {
 }
 ```
 
-````js
+```js
 for (let countdown = 10; countdown > 0; countdown--) {
   console.log(countdown);
 }
@@ -562,7 +633,27 @@ const random = ["tree", 795, [0, 1, 2]];
 console.log(colors);
 console.log(sequence);
 console.log(random);
-````
+```
+
+### Accessing data within an array using item index
+
+An item in a JavaScript array is accessed by referring to the index number of the item in square brackets. We know 0 will always output the first item in an array.
+
+```js
+const firstColor = colors[0];
+console.log(firstColor);
+```
+
+This will give us `red` as we expected.
+
+### array length
+
+We can get the length of an array using the `.length` property of the array.
+
+```js
+const sequenceLength = sequence.length;
+console.log(sequenceLength);
+```
 
 ### for loop using arrays or words
 
@@ -573,108 +664,15 @@ for (let i = 0; i < word.length; i++) {
 }
 ```
 
-### objects
+### Assignment - Basic Palindrome
+
+For this exercise, use all the concepts above and divise a way to check if a word is a Palindrome or not:
 
 ```js
-const dog = {
-  name: "Rocky",
-};
-const student = {
-  firstName: "Jack",
-  rollNo: 32,
-};
-const car = { type: "Fiat", model: "500", color: "white" };
-
-console.log(dog);
-console.log(student);
-console.log(car);
+let wordToCheck = "tacocat";
+let isPalindrome;
+// ... write some code
+console.log(isPalindrome);
 ```
 
-### value assignment vs reference assignment, get and set values
-
-<!-- ```js
-console.log("replace");
-``` -->
-
-## conditions revisited: null values
-
-<!-- ```js
-console.log("replace");
-``` -->
-
-## special for loops: for...of vs for...in
-
-```js
-const array1 = ["a", "b", "c"];
-
-for (const element of array1) {
-  console.log(element);
-}
-```
-
-```js
-const object = { a: 1, b: 2, c: 3 };
-
-for (const property in object) {
-  console.log(`${property}: ${object[property]}`);
-}
-```
-
-## break revisited vs continue
-
-<!-- ```js
-console.log("replace");
-``` -->
-
-## multi-dimensional arrays
-
-```js
-let matrix = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-];
-console.log(matrix);
-```
-
-## string manipulation: toUpperCase, toLowerCase, substr, substring
-
-<!-- ```js
-console.log("replace");
-``` -->
-
-## functions: parameters & arguments, arrow functions, bookmarklet
-
-```js
-function functionName(parameter1, parameter2, parameter3) {
-  // code to be executed
-  console.log(`
-  parameter1: ${parameter1}
-  parameter2: ${parameter2}
-  parameter3: ${parameter3}
-  `);
-}
-```
-
-```js
-functionName(1, 2, 3);
-functionName("hi", "my", "name");
-```
-
-### Arrow functions
-
-<!-- ```js
-console.log("replace");
-``` -->
-
-## exercises: Palindrome, character replacement, return array of values from list of objects
-
-<!-- ```js
-console.log("replace");
-``` -->
-
-## if we have time: event handlers, async / await, modules
-
-<!-- ```js
-console.log("replace");
-``` -->
+`isPalindrome` should give you an answer back if the `wordToCheck` is a Palindrome or not.
