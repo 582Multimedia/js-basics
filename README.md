@@ -498,12 +498,12 @@ bool2: ${bool2}`);
 
 ### Logic table
 
-| expr1 | expr2 | AND                | OR                 | XOR                |
-| ----- | ----- | ------------------ | ------------------ | ------------------ |
-| true  | true  | :white_check_mark: | :x:                | :x:                |
-| true  | false | :x:                | :white_check_mark: | :white_check_mark: |
-| false | true  | :x:                | :white_check_mark: | :white_check_mark: |
-| false | false | :x:                | :x:                | :x:                |
+| expr1                   | expr2                   | AND                | OR                 | XOR                |
+| ----------------------- | ----------------------- | ------------------ | ------------------ | ------------------ |
+| :white_check_mark: true | :white_check_mark: true | :white_check_mark: | :x:                | :x:                |
+| :white_check_mark: true | :x: false               | :x:                | :white_check_mark: | :white_check_mark: |
+| :x: false               | :white_check_mark: true | :x:                | :white_check_mark: | :white_check_mark: |
+| :x: false               | :x: false               | :x:                | :x:                | :x:                |
 
 ### Examples
 
