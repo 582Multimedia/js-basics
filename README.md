@@ -634,6 +634,7 @@ Think levels of government: federal, provincal, municipal. When you go from the 
 let scope = 5;
 {
   let scope = 3;
+  console.log(scope);
 }
 console.log(scope);
 ```
