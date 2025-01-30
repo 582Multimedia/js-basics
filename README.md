@@ -76,7 +76,7 @@ If you want to write on more than one line, you can use the new line symbol `\n`
 
 #### Template literals
 
-You can use template literals to write more than one line, instead of using regular single or double quotes, you can use backticks `` ` `` (the backticks key is usually under the `esc` key and next to the `1` key).
+You can use template literals to write more than one line, instead of using regular single or double quotes, you can use **backticks** `` ` `` (the backticks key is usually under the `esc` key and next to the `1` key).
 
 ```js
 console.log(`
