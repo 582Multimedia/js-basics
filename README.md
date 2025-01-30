@@ -632,15 +632,17 @@ Think levels of government: federal, provincal, municipal. When you go from the 
 
 ```js
 let scope = 5;
+console.log(`global: ${scope}`);
 {
   let scope = 3;
-  console.log(scope);
+  console.log(`after let scope = 3: ${scope}`);
   {
     let scope = 1;
-    console.log(scope);
+    console.log(`after let scope = 1: ${scope}`);
   }
+  console.log(`exited the 1 scope, back to 3: ${scope}`);
 }
-console.log(scope);
+console.log(`global: ${scope}`);
 ```
 
 contrast this with the following:
