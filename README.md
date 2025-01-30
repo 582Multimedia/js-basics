@@ -718,9 +718,11 @@ for (let i = 0; i < word.length; i++) {
 
 ### :trollface:
 
+A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar, the date "22/02/2022" and the sentence: "A man, a plan, a canal - Panama".
+
 For this exercise, use all the concepts above and divise a way to check if a word is a Palindrome or not.
 
-A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar, the date "22/02/2022" and the sentence: "A man, a plan, a canal - Panama".
+Use simple words without spaces like: laval or racecar to test your code, **no spaces**.
 
 Sample code:
 
