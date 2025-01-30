@@ -1,6 +1,7 @@
 # 👋 Javascript Basics / Refresher Course 👋
 
 [download Node.js](https://nodejs.org/en)
+
 - in terminal, see node version type: $ node -v (without the dollar sign which just tells us to input this in terminal)
 - enter node: $ node
 
@@ -245,7 +246,7 @@ Also works for floating points!
 
 #### Adding Numbers and strings (text) that are not pure numbers
 
-let's try adding the Number `1` and a string `654.321testing`
+let's try adding the Number `1` and a string `987.654testing321`
 
 ```js
 let mixedString = `987.654testing321`;
@@ -267,7 +268,7 @@ NaN stands for Not a Number
 #### Parsing (string to integer or floating point)
 
 ```js
-console.log(1 + +parseInt(mixedString));
+console.log(1 + parseInt(mixedString));
 ```
 
 This will give us `988`, 1 + 987 as a whole number.
@@ -280,9 +281,9 @@ This will give us `988.654`, 1 + 987.654 as a floating point number.
 
 Note: All parsing will result in removal of any characters after encountering the first alphabet character.
 
-#### Brain teaser: BaNaNa
+#### Brain teaser: baNaNa
 
-Using just a combination of operations we've looked at and **ONLY** the lower case letters `a` and `b`, how can we get the console to output `BaNaNa`?
+Using just a combination of operations we've looked at and **ONLY** the lower case letters `a` and `b`, how can we get the console to output `baNaNa`?
 
 ```js
 console.log("put your solution here");
