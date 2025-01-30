@@ -1,6 +1,8 @@
 # 👋 Javascript Basics / Refresher Course 👋
 
 [download Node.js](https://nodejs.org/en)
+- in terminal, see node version type: $ node -v (without the dollar sign which just tells us to input this in terminal)
+- enter node: $ node
 
 Topics:
 
