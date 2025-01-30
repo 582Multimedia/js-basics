@@ -1,5 +1,7 @@
 # 👋 Javascript Basics / Refresher Course 👋
 
+[download Node.js](https://nodejs.org/en)
+
 Topics:
 
 - Console, Code Flow, Loading Order & Defer
