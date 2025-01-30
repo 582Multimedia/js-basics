@@ -635,6 +635,25 @@ let scope = 5;
 {
   let scope = 3;
   console.log(scope);
+  {
+    let scope = 1;
+    console.log(scope);
+  }
+}
+console.log(scope);
+```
+
+contrast this with the following:
+
+```js
+let scope = 5;
+{
+  scope = 3;
+  console.log(scope);
+  {
+    scope = 1;
+    console.log(scope);
+  }
 }
 console.log(scope);
 ```
