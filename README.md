@@ -23,7 +23,10 @@
 - loops: while, do... while, for
 - variables revisited, for loop: global vs local / block scope
 - arrays & objects
-- Assignment - Basic Palindrome
+
+> [!NOTE]
+> Brain teaser: baNaNa
+> Assignment: Basic Palindrome
 
 ### [CLASS 2](./class-02.md)
 
