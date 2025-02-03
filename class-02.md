@@ -1,8 +1,18 @@
-# TEMP NOTES
+# Class 2
 
-## Class 2
+- arrays & objects: value assignment vs reference assignment, get and set values
+- conditions revisited: null values
+- special for loops: of vs in
+- break revisited vs continue
+- multi-dimensional arrays
+- string manipulation: toUpperCase, toLowerCase, substr, substring
+- functions: parameters & arguments, arrow functions, bookmarklet
+- exercises: Palindrome, character replacement, return array of values from list of objects
+- if we have time: event handlers, async / await, modules
 
-### objects
+## nested loops
+
+## objects
 
 ```js
 const dog = {
@@ -19,7 +29,7 @@ console.log(student);
 console.log(car);
 ```
 
-### value assignment vs reference assignment, get and set values
+## value assignment vs reference assignment, get and set values
 
 <!-- ```js
 console.log("replace");
