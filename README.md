@@ -39,3 +39,6 @@
 - functions: parameters & arguments, arrow functions, bookmarklet
 - exercises: Palindrome, character replacement, return array of values from list of objects
 - if we have time: event handlers, async / await, modules
+
+
+### [CLASS 3](./class-03.md)
